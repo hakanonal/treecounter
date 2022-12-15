@@ -4,4 +4,5 @@ This project tries to accomplish read DJI drone images and videos that has been 
 
 ## Documentation
 
-As always I keep my journal [here](docs/journal.md)
+- As always I keep my journal [here](docs/journal.md)
+- The project board is created [here](https://github.com/users/hakanonal/projects/2)
