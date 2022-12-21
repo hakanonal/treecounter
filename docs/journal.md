@@ -39,3 +39,16 @@ Disclaimer: This document is my journal about this project. I am writing all my 
             - while looking I've bumped into [this](https://theailearner.com/2018/10/15/extracting-and-saving-video-frames-using-opencv-python/) which I may use to read the video file any way.
         - every solution is about extracting the harcoded subtitle which involves with a lot of OCR buiseness. I do not need that. I have already soft srt data attached to the video. I just simple couple of lines how to read srt which is already there. no luck yet.
         - I am running out of time for today so I will continue later after I am commiting everything.
+
+#### 20.12.2022        
+
+-  extract SRT from the video by code
+    - So I've decided to reverse engineer [this](https://djitelemetryoverlay.com/subtitle-extractor/#) 
+        - failed to do that! the files wont format properlly.
+    - I am looking the API of opencv try to see if there is anything to read the captions.
+    - when I am searching how to extract the metadata of a video I've bumper into [this](https://www.thepythoncode.com/article/extract-media-metadata-in-python), however I am getting ffprobe file not found error.
+        - I found [this](https://stackoverflow.com/questions/57350259/filenotfounderror-errno-2-no-such-file-or-directory-ffprobe-ffprobe) solution. I need to install the ffmepeg on the computer. python installation may not be enough.
+        - Ok I have installed and moved the ff commands into bin of the treecounter environment and it worked
+        - however, there is no subtitle information in that result.
+        - More interestinglly the resulting probe has attributes called caption and it is 0. as if video has no caption. however I can view the captions in VLC. but not in quicktime.
+    - I've mailed Juan, maybe he can help...
