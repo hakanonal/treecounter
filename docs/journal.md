@@ -63,3 +63,29 @@ Disclaimer: This document is my journal about this project. I am writing all my 
     - [This](https://stackoverflow.com/questions/69218400/how-to-use-multiple-map-values-in-ffmpeg-python) might help for code version. well could not understand fully how can implement into my project.
     - I need to pipe completelly all the way to the deepforest. instead of input ouput seperatelly.
 - Now I have another problem, my discovery notebook stoped working. it locks the kernel while I am executing the deepforest.
+
+#### 28.12.2022
+
+- So I've come to a coworking space in izmir alsancak. Have 2 hours to work..
+    - remembering where I've left...
+- So I was looking for a way to output ffmpeg result (subtitle) to a variable not and output file. 
+    -[this](https://superkogito.github.io/blog/2020/03/19/ffmpeg_pipe.html) might help. In this solution we will not need to install python-ffmpeg module. it will call the commandline directlly. let's try.
+        - executing subprocess command seems to be does not work. I think subprocess module did not recognize that ffmpeg is there.
+    - How about [this](https://github.com/kkroening/ffmpeg-python/blob/master/examples/README.md#tensorflow-streaming) I've already executed python-ffmpeg let's give it a try.
+        - however I am not sure yet how I execute the same command above with python let first accomplish that. this worked. note that ~ tilda symbol in path does not work. you need to give full path.
+            ```
+            ffmpeg.input("/Users/hakanonal/Downloads/temp_video_for_share.mp4").output("data/subs.srt",map = "0:s:0").run()
+            ```
+        - no let's pipe it accorindg to the docs...
+            - well I could not execute the pipe even with the command line. 
+    - Maybe I can directlly convert each seconds of the video as image. and extract the srt file. on my next step I can loop though these to create the geotiff using GAL lib.
+        - So extrating srt to file is done. let's extrat each second to image [this](https://superuser.com/questions/135117/how-to-extract-one-frame-of-a-video-every-n-seconds-to-an-image) may help.
+            - And it kind of worked. 
+    
+- So these are the design notes: not a very plesant way of aproach but currentlly this is the best I have managed to make it work.
+    - extract subtitles to a file
+    - extract each second of video to a image file.
+    - loop thorugh subtitles and for each entry
+        - create a geotiff file.
+        - input each geotiff to deepforest (which is curentlly is not working some reason)
+        - execute to db save prosedure ensuring not the record multiple times for the same identified tree.
