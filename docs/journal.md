@@ -52,3 +52,14 @@ Disclaimer: This document is my journal about this project. I am writing all my 
         - however, there is no subtitle information in that result.
         - More interestinglly the resulting probe has attributes called caption and it is 0. as if video has no caption. however I can view the captions in VLC. but not in quicktime.
     - I've mailed Juan, maybe he can help...
+
+#### 21.12.2022
+
+- So I've got response from Juan. Thank you so much for help. [Here](https://superuser.com/questions/583393/how-to-extract-subtitle-from-video-using-ffmpeg) is his forward.
+    - Now this is worked, but how can I read it into memory but not into file.
+    ```
+    ffmpeg -i ~/Downloads/temp_video_for_share.mp4  -map 0:s:0 data/subs.srt
+    ```
+    - [This](https://stackoverflow.com/questions/69218400/how-to-use-multiple-map-values-in-ffmpeg-python) might help for code version. well could not understand fully how can implement into my project.
+    - I need to pipe completelly all the way to the deepforest. instead of input ouput seperatelly.
+- Now I have another problem, my discovery notebook stoped working. it locks the kernel while I am executing the deepforest.
