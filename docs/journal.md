@@ -99,3 +99,15 @@ Disclaimer: This document is my journal about this project. I am writing all my 
     - dialog is in [discovery](discovery.ipynb) notebook.
     - of course it did not work directlly, however it give me a huge jump start. Instead of looking for example codes by searching site by site.
         - I've modified the code according to the errors I have as far as my understanding.
+
+#### 31.12.2022
+
+- I am trying to divde the code into pices and see each steps result and understand.
+    - Well I've started to divide, however it did not work initially. I've understand that I need to ask correct questions to chatGPT. 
+- Now I need to test if the generated output is readable by DeepForest.
+- To re-run the deepforest I am going to destroy the environment and create again.
+    - So I am suspecting that when I install some other packages it has clashed versions with others. Some how my freezed requirements may got confused. Hence Since I've solved to create GeoTiff by using rasterio module I did not need GAL. So a clean environment would do great.
+    - please next time do not forget: after creating environment move ffmpeg anf ffprobe binary files into environments bin folder.
+    - fresh install hepled and I freezed again.
+    - Well seems that my generated geo coded tiff recognized by deepforest so task accoplishi. Happy new year!
+    
