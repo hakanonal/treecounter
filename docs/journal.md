@@ -80,7 +80,10 @@ Disclaimer: This document is my journal about this project. I am writing all my 
             - well I could not execute the pipe even with the command line. 
     - Maybe I can directlly convert each seconds of the video as image. and extract the srt file. on my next step I can loop though these to create the geotiff using GAL lib.
         - So extrating srt to file is done. let's extrat each second to image [this](https://superuser.com/questions/135117/how-to-extract-one-frame-of-a-video-every-n-seconds-to-an-image) may help.
-            - And it kind of worked. 
+            - And it kind of worked. Here is the command line
+            ```
+            ffmpeg -i /Users/hakanonal/Downloads/temp_video_for_share.mp4 -r 1 output_%05d.png
+            ```
     
 - So these are the design notes: not a very plesant way of aproach but currentlly this is the best I have managed to make it work.
     - extract subtitles to a file
@@ -89,3 +92,10 @@ Disclaimer: This document is my journal about this project. I am writing all my 
         - create a geotiff file.
         - input each geotiff to deepforest (which is curentlly is not working some reason)
         - execute to db save prosedure ensuring not the record multiple times for the same identified tree.
+
+#### 30.12.2022
+
+- So Last night I've tried [chatGPT](https://openai.com/blog/chatgpt/). "Cheater". Very emotional momnets. So from now on probally most of the code will be based from chatGPT.
+    - dialog is in [discovery](discovery.ipynb) notebook.
+    - of course it did not work directlly, however it give me a huge jump start. Instead of looking for example codes by searching site by site.
+        - I've modified the code according to the errors I have as far as my understanding.
