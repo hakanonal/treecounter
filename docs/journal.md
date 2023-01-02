@@ -109,5 +109,16 @@ Disclaimer: This document is my journal about this project. I am writing all my 
     - So I am suspecting that when I install some other packages it has clashed versions with others. Some how my freezed requirements may got confused. Hence Since I've solved to create GeoTiff by using rasterio module I did not need GAL. So a clean environment would do great.
     - please next time do not forget: after creating environment move ffmpeg anf ffprobe binary files into environments bin folder.
     - fresh install hepled and I freezed again.
-    - Well seems that my generated geo coded tiff recognized by deepforest so task accoplishi. Happy new year!
+    - Well seems that my generated geo coded tiff recognized by deepforest so task accoplished. Happy new year!
     
+#### 02.01.2023
+
+- Well after the acoompliedment of the last year :P, I have a small adjustment. While I am geo coding the image I think I can transform the image size as square. Because my previous try the hit rate of the NN was much hiher when the provided image was square in size. We'll see...
+    - thanks to chatGPT and we have modified it quicklly,
+- However, the hit rate of the image is pretty bad. out of 13 trees only 4 of them found and also there are 3 false positives.
+    - about false positives, I may have to develop some kind of a logic that for the same tree I need to hit the same tree on multiple images so that I would have make sure the hit is not false positive.
+- My plan is to consecutivelly predict images and check their geo codes of the same tree on multiple different images.
+    - ok I've functioned in the geocode generator.
+    - I am repopulating the main program on a fresh notebook [here](../main.ipynb)
+- I've almost completed the design of the program. I want to parse subtitles srt file properlly so I can loop though.
+    - well with the help of chatGPT, I have started to write a parser and completed a beatiful parser that reads the text subtitle file and outputs all related data within a dataframe.
