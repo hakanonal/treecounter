@@ -122,3 +122,9 @@ Disclaimer: This document is my journal about this project. I am writing all my 
     - I am repopulating the main program on a fresh notebook [here](../main.ipynb)
 - I've almost completed the design of the program. I want to parse subtitles srt file properlly so I can loop though.
     - well with the help of chatGPT, I have started to write a parser and completed a beatiful parser that reads the text subtitle file and outputs all related data within a dataframe.
+
+
+#### 04.01.2023
+
+- So Is all components ready? Let's see if we can get the voltrun together.
+    - 
