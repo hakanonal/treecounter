@@ -128,3 +128,12 @@ Disclaimer: This document is my journal about this project. I am writing all my 
 
 - So Is all components ready? Let's see if we can get the voltrun together.
     - 
+
+#### 15.01.2023
+
+- My journal seems to missing. I wonder why? :) Well voltrun is not together I suppose. Let's see what happened. 
+    - well We have put a code that calls all the functions that we have planeed and we have ploted the predicted images side by side to check by eye. The performance consistantlly very poor. 
+    - I will try to decrease the resolution of the input image to the deepforest and see.
+        - Well suprisng turn of events: while what I wanted to decrease the reqoulsition, I used chatGPT again. I had to re-login and my previous questions was removed. So I had to ask the entire question again. When I asked the question I trecommends me a new code that only uses PIL library including the geotransforing. When I also predict the image with deppforest I've %100 percent hit rate. I did that in discovery 
+    - I will now implement it to my main and see if it is going to hit on a series of images.
+        - So we have definintelly more hits then before. However there are some misses again. I have looked thourgh with eye that if a single tree can be identifed in any of the series. Looks like there is at least one identification. We will see on the next round that if I can identify programaticlly using the geo codes. I am afraid of that the resolution of (refresh rate) goe codes are not good enough. It has to give same coordinate for each different picture for the same tree on different located bounding box and geo location. We'll see how to figure it out.
