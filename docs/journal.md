@@ -145,3 +145,15 @@ Disclaimer: This document is my journal about this project. I am writing all my 
 - I will try to change resolkution using rasterio.
     - well instead of doing with rasterio I have done it with ffmpeg from the source. the video source png images are directlly being saved as cropped and scaled right away.
 - 
+
+#### 18.01.2023
+
+- Wow great day to start coding. chatGPT gave me wonderful cod eexmaple to visualize my polygons on a map. And quicklly iy appears that the polygons that I have generated are wrong. Somehow I need to keep the polygons coordinates are within latitude and longitude specturum.
+- So I need to get back to my geocode tiff image generator and or deepforst annonation code.
+- Ok as I suspected there just not enugh resolution for to assign a sinlg uniqe latitude and longitude for each tree. To put it another way a single lang-lat combinatoin has may multiple trees in it. So ı need to find a more clver way to identify them.
+    - So when I re-think, This would be meaningful question, how many trees are there in a single shot at that same location? I am aware of that there are multiple different shots for the same lat-lon. Taking considering also the height, I may need to consider to approxmizte min-max pixel change and decide if it is another tree or different tree.
+    - aditionally, I do not need to annonate the geo code. Even I may not need to geo code the tiff. because I will never have a proper geo coded boundbox polygon on a map for single tree. The resolution is just not enough. However I can define a tree not like polygon but like point.
+- So the goal is to derive the lat-long point from the given lat-long of the image and height.
+    - Ok we are getting somewhere by tweaking the pixel of the geo coded generator transform object from_origin.
+    - Well! I think we properlly mapped the predicted trees on a real map. which is a huge achivement.
+    - We will continue, on mapping multiple pictures and continue to explore on this...
