@@ -157,3 +157,9 @@ Disclaimer: This document is my journal about this project. I am writing all my 
     - Ok we are getting somewhere by tweaking the pixel of the geo coded generator transform object from_origin.
     - Well! I think we properlly mapped the predicted trees on a real map. which is a huge achivement.
     - We will continue, on mapping multiple pictures and continue to explore on this...
+
+#### 19.01.2023
+
+- I will try to put multiple images on the map and see...
+    - Well I did that using my main notebook. I've even created seperate features so that I can hide and show individually.
+    - It is clear that the origin is same for at least 4 different images so slight changes on the predictions are hepening netween those ~4 images and after that it jumps to another origin. I am stuck at this point.
