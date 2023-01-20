@@ -163,3 +163,10 @@ Disclaimer: This document is my journal about this project. I am writing all my 
 - I will try to put multiple images on the map and see...
     - Well I did that using my main notebook. I've even created seperate features so that I can hide and show individually.
     - It is clear that the origin is same for at least 4 different images so slight changes on the predictions are hepening netween those ~4 images and after that it jumps to another origin. I am stuck at this point.
+
+#### 20.01.2023
+
+- I have started the day thinking about how can get more pricese lat long value, from the given drone meta data. After some chatting with chatGPT using the altidute it seems that we can interpolate (I do not know what it means) and find a more pricise lat long value. Let's discover the results a little bit.
+    - So with the help of chatGPT again, with couple of back and forth questions and answers, I have mamanged to create better previse lat and long, however there still same lat and long values for different pictures evn though there is speed on both of the pictures. In short if there is speed the drone should be in different exact position right? chat gpt suggest to use WGS84 ellipsoid model let's see what it is going to suggest?
+        - That did not worked either
+- Instead I have managed to increase the resolution of the coordinates, by looking at the flight plan and find the direction. By using that direction I have increased the lat or lon with the amount of speed. multiplied by some coefficient. on the map seems it is working. at least the same trees on different pictures seems to be overlapping on the map.
